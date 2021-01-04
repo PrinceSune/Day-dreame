@@ -1,0 +1,60 @@
+/* pages/mine/mine.wxss */
+page{
+    background-color: #FFFFFF;
+    height: 100%;
+}
+button::after{
+  border: none!important;
+}
+.kefu{
+  height: 90rpx;
+  text-align: left;
+  color: #666666;
+}
+.mine_top { 
+	width: 100%; 
+	color: #fff;
+	height: 650rpx; 
+	padding:80rpx 30rpx;
+	background: linear-gradient(150deg,#fbd484,#fe8888); 
+}
+.mine_top>view{
+	float: left;
+}
+.box{
+	width: 100%;
+	height: 800rpx;
+	position: fixed;
+	top: 360rpx;
+}
+.mine_bottom { 
+	width: 100%; 
+}
+.mine_bottom image{
+	width: 750rpx;
+	height: 120rpx;
+}
+.vipicon>view{
+	float: left;
+	margin:2rpx 10px 0;
+	width: 90rpx;
+	text-align: center;
+}
+.vipicon view{
+	font-size: 36rpx;
+}
+.vipicon text{
+	font-size: 14rpx;
+}
+.liebiao>view,view>button{
+	border-bottom:1rpx solid #ddd;
+	height: 90rpx;
+	width: 100%;
+	line-height: 90rpx;
+	font-size: 25rpx;
+}
+.liebiao text{
+	font-size:20rpx; 
+	line-height:90rpx;
+	float: right;
+}

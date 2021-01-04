@@ -1,0 +1,61 @@
+page{
+	background-color: #FFFFFF;
+}
+.dish_tag{
+	height: 15rpx;
+}
+.recommend0{
+  display: none;
+}
+.dish_tag>view{
+	margin-top: 10rpx;
+	float: left;
+}
+.dishcount{
+	margin-right: 35rpx;
+	height: 100rpx;
+}
+.dishcount>view{
+	float: right;
+}
+.dish_num{
+	margin:0 10rpx;
+	font-size: 38rpx;
+    line-height: 44rpx;
+    padding: 0 13rpx;
+}
+.hide0{
+  display:none;
+}
+.address{
+	padding: 12rpx 35rpx;
+}
+.add-card{
+	width: 680rpx;
+	height: 150rpx;
+	border: 1rpx solid #e6e6e6;
+	margin: 25rpx 0 40rpx;
+	padding:18rpx ;
+}
+.add-card>view{
+	float: left;
+}
+.allselected{
+  width: 100%;
+  height: 120rpx;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  bottom: 0;
+  border-top:1rpx solid #ddd;
+  box-shadow: -1rpx 0 2rpx 2rpx #eee;
+}
+.gatebutton{
+	background-color: #FF6634;
+	font-size: 28rpx;
+	padding: 5rpx 120rpx;
+	width: 600rpx;
+	margin:20rpx auto;
+}

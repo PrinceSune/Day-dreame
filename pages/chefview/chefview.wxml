@@ -1,0 +1,41 @@
+<!--pages/chushiView/chushiView.wxml-->
+<!--用来装所有内容的盒子-->
+<view class="Box">
+  <view class="vanishBox"></view>
+  <!--这里是头部开始-->
+  <view class="header bg-white shadow-warp">
+     <!--占位的盒子-->
+     <view class="vanishBox"></view>
+     <view class="myPh">
+          <image class="photo" src="{{img}}"></image>
+     </view>
+     <view class="myNa">{{name}}</view>
+     <view class="nativePlace">{{nativeplace}}</view>
+     <view class="tel">电话：{{tel}}</view>
+     <view class="tagBox">
+       <view class="tag1">庖丁解牛</view>
+       <view class="tag2">大家手笔</view>
+       <view class="tag3">手艺精巧</view>
+     </view>
+  </view>
+  <!--头部结束-->
+  <view class="body  bg-white shadow-warp padding">
+  <!--个人介绍-->
+     <view class="titleBox">个人介绍</view>
+     <view class="introduce">
+            {{introduce}}
+    </view>
+  
+  
+  </view>
+   <view class="body  bg-white shadow-warp padding">
+  <!--个人介绍-->
+     <view class="titleBox">评价</view>
+     <view class="introduce">
+            {{comments}}
+    </view>
+  
+  
+  </view>
+  <view class="vanishBox"></view>
+</view>

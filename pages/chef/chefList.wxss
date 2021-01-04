@@ -1,0 +1,121 @@
+/* pages/chushiList/chushiList.wxss */
+.head{
+  width: 100%;
+ 
+}
+.headTitle{
+  width: 20%;
+  height: 45rpx;
+  border-radius: 30rpx;
+  line-height: 50rpx;
+  text-align:center ;
+  font-size: 25rpx;
+  font-weight: 600;
+  margin:4rpx 3%;
+  letter-spacing:5rpx ;
+  background-color: red;
+}
+
+.chefRelist{
+  width: 94%;
+  margin-left: 3%;
+  margin-top: 2%;
+  display: flex;
+  justify-content: flex-end;
+}
+.chef{
+   width: 25%;
+   margin-left: 2%;
+}
+.chefPh{
+  width: 90%;
+  height: 120rpx;
+  border-radius: 50%;
+}
+
+.photo{
+  width: 90%;
+  height: 110rpx;
+  margin-left: 4.7%;
+  margin-top: 6.8rpx;
+  border-radius: 50%;
+
+}
+.chefNa{
+
+  width: 90%;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 20rpx;
+  text-align: center;
+  font-weight: 800;
+}
+.vanishBox{
+  width: 100%;
+  height: 30rpx;
+}
+
+.body{
+  width: 100%;
+}
+.listBox{
+
+  width: 94%;
+  margin-left: 3%;
+}
+
+.member{
+  width: 100%;
+  height: 200rpx;
+  margin-top:1% ;
+  display: flex;
+  border-bottom: 	#B0B0B0 solid 1px;
+}
+
+.listPh{
+  width: 18%;
+  height: 130rpx;
+  border-radius: 50%;
+  margin-top: 35rpx;
+  margin-left: 2%;
+  
+}
+.photo2{
+  width: 94%;
+  height: 120rpx;
+  margin-left: 3%;
+  margin-top:5rpx;
+  border-radius: 50%;
+
+}
+
+.Infor{
+ width: 75%;
+ height: 165rpx;
+ margin-left: 5%;
+ margin-top: 35rpx;
+
+}
+
+.myNa{
+  width: 90%;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 25rpx;
+  font-weight: 800;
+
+}
+.comments{
+  width: 98%;
+  height: 90rpx;
+  color: 	#C8C8C8	;
+  line-height: 30rpx;
+  font-size: 20rpx;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-indent: 2em;
+}

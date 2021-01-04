@@ -1,0 +1,25 @@
+
+<view class="bg-white shadow radius" style="width: 580rpx;margin: 100rpx auto 50rpx;padding: 30rpx 0;">
+	<form>
+		<view class="cu-form-group align-start">
+			<view class="title" style="font-weight: bolder;">留言：</view>
+			<textarea bindinput="fnmessage" value="{{kong}}" style="height: 360rpx;" maxlength="-1" disabled="{{modalName!=null}}" placeholder="在此输入反馈信息"></textarea>
+		</view>
+		<view class="cu-form-group">
+			<view class="title">联系方式</view>
+			<input type="text" value="{{kong}}" bindinput="fnlinktype" placeholder="手机或邮箱"></input>
+		</view>
+		<view class="cu-form-group margin-top">
+			<view class="title">称呼</view>
+			<input type="text" value="{{kong}}" bindinput="fntruename" placeholder="例:X先生/Y女生"></input>
+		</view>
+	    <button bindtap="fnsubmit" class="cu-btn lg round" style="width: 460rpx;margin-left:60rpx ; background-color: #ffb1ae;height: 70rpx;color: white;font-weight: bolder;font-size: 26rpx;">
+			确认提交
+		</button>
+	
+	</form>
+</view>
+
+<view class="text-sm text-grey" style="width:100%;text-align: center;">
+	您的反馈对我们来说至关重要！
+</view>

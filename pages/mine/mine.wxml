@@ -1,0 +1,97 @@
+<!--pages/mine/mine.wxml-->
+	<view class="mine_top"> 
+	  <view class="cu-avatar lg round margin-left" style="background-image:url(http://192.168.43.183:8000/static/uploadimg/head.png);">
+		  <image src="{{headimg}}" style="height:96rpx;width：76rpx;border-radius:50%"></image>
+	  </view>
+	  <view class="text_area" style="padding: 10rpx 30rpx;">
+		  <view class="text-lg" style="font-weight: bold;">{{username}}</view>
+		  <view class="text-sm">{{regtime}}是我们认识的第一天</view>
+	  </view>
+	  <navigator url="/pages/myinform/myinform" hover-class="navigator-hover" open-type="navigate" style="float: right;position:relative;z-index:99; margin-right: -50rpx;">
+		<button class="cu-btn round sm bg-white text-sm" role="button" aria-disabled="false" style="font-size: 20rpx;padding: 0rpx 40rpx 0rpx 30rpx;">个人信息<text class="cuIcon-playfill" style="font-size: 20rpx;margin-left: 5rpx;color: #FCA090;"></text> </button>
+	  </navigator>
+	  <scroll-view scroll-y="true" style=" height:400rpx;" >
+	  	<view style="height: 100rpx;width: 100%;"></view>
+	  	<view class="bg-black vip-card"  style="width: 690rpx;height: 380rpx;border-radius: 20rpx;padding: 20rpx;25rpx">
+	  	    <view class="text-sm">白日梦想| 法餐厅`Day dream新会员 </view>
+			<view class="cu-progress bg-grey round xs" style="width: 420rpx;">
+			<view class="bg-white" style="width:{{the_percentage_points}}%;"></view>
+			</view>
+			<view class=" text-xs" style="margin: 12rpx 0 20rpx;">再累计{{the_cha_points}}积分，可升到LV2</view>
+			<view class="vipicon" style="color: #f7f7f7;"> 
+			   <view bindtap="showModal" data-target="DialogModal1" role="button" aria-disabled="false">
+				  <view class="cuIcon-evaluate_fill"></view><text>1倍积分奖励</text> 
+			   </view>
+			   <view class="cu-modal {{modalName=='DialogModal1'?'show':''}}" style="width: 100%;margin-left:1rpx;">
+			      <view class="cu-dialog">
+			        <view class="cu-bar bg-white justify-end">
+			          <view class="content">1倍积分奖励</view>
+			        </view>
+			        <view class="padding-xl text-black" style="font-size: 28rpx;">
+			         积分越多优惠越多，还可到店消费抵用
+			        </view>
+				    <view class="padding flex flex-direction">
+					  <button class="cu-btn bg-grey lg round" role="button" aria-disabled="false" bindtap="hideModal">朕知道了</button>
+				    </view>
+			      </view>
+			   </view>
+			   <view bindtap="showModal" data-target="DialogModal2" role="button" aria-disabled="false"> 
+			     <view class="cuIcon-presentfill"></view><text>节日礼包</text> 
+			   </view>
+			   <view class="cu-modal {{modalName=='DialogModal2'?'show':''}}" style="width: 100%;margin-left:1rpx;">
+			      <view class="cu-dialog">
+			        <view class="cu-bar bg-white justify-end">
+			          <view class="content">节日礼包</view>
+			        </view>
+			        <view class="padding-xl text-black" style="font-size: 28rpx;">
+			         每年的生日和周年纪念日都有对应的好礼相送
+			        </view>
+			   		<view class="padding flex flex-direction">
+			   			<button class="cu-btn bg-grey lg round" role="button" aria-disabled="false" bindtap="hideModal">朕知道了</button>
+			   		</view>
+			      </view>
+			   </view>
+			   <view class="cu-modal {{modalName=='DialogModal3'?'show':''}}" style="width: 100%;margin-left:1rpx;">
+            <view class="cu-dialog">
+              <view class="cu-bar bg-white justify-end">
+                <view class="content">退出登录</view>
+                <view class="action" bindtap="hideModal">
+                  <text class="cuIcon-close text-red"></text>
+                </view>
+              </view>
+              <view class="padding-xl text-black">
+                确认退出登录状态状态吗？
+              </view>
+              <view class="cu-bar bg-white justify-end">
+                <view class="action">
+                  <button class="cu-btn line-green text-green" bindtap="hideModal">取消</button>
+                  <button class="cu-btn bg-green margin-left" bindtap="clearall">确定</button>
+
+                </view>
+              </view>
+            </view>
+          </view>
+			   <view> <navigator url="/pages/vipgrade/vipgrade" hover-class="navigator-hover" open-type="navigate" class="cuIcon-more"></navigator><text></text> </view>
+			</view>   
+			<navigator url="/pages/vipgrade/vipgrade" hover-class="navigator-hover" open-type="navigate" style="float: right;position:relative;z-index:99; margin:-103rpx 10rpx;">
+					<button class="cu-btn round" role="button" aria-disabled="false" style="font-size: 18rpx;padding: 0rpx 30rpx;height: 38rpx;">会员权益<text class="cuIcon-playfill" style="font-size: 20rpx;margin-left: 5rpx;color: #000;"></text> </button>
+			</navigator>
+		</view>
+	  </scroll-view>
+	</view> 
+
+<view class="box">
+  <view class=" mine_bottom"><image src="../../images/tou.png"></image> </view>
+	<view class="liebiao bg-white" style="width: 100%;margin-top: -10rpx;padding:10rpx 30rpx;">
+	    <view><navigator url="/pages/myinform/myinform" hover-class="navigator-hover" open-type="navigate">个人信息<text class="cuIcon-playfill"></text> </navigator></view>
+		<view><navigator url="/pages/myorder/myorder" hover-class="navigator-hover" open-type="navigate">我的订单<text class="cuIcon-playfill"></text>  </navigator></view>
+    <view>
+      <button class="kefu" open-type="contact" bindcontact="handleContact" style="padding:0;background-color:#ffffff;">在线客服
+        <text class="cuIcon-playfill"></text>  </button>
+    </view>
+		<view><navigator url="/pages/leavemessage/leavemessage" hover-class="navigator-hover" open-type="navigate">留言反馈<text class="cuIcon-playfill"></text>  </navigator></view>
+    <view bindtap="showModal" data-target="DialogModal3">退出登录<text class="cuIcon-playfill"></text></view>
+	</view>
+	<view style="height: 300rpx;"></view>
+ 
+</view>

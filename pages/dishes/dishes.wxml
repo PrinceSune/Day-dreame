@@ -1,0 +1,133 @@
+<import src="dishes.skeleton.wxml"/>
+<template is="skeleton" wx-if="{{loading}}"/>
+	<view class="listbox">
+<!-- 搜索开始 -->
+
+	<navigator open-type="navigate" hover-class='none' url="/pages/foodlist/foodlist" class="searchbox">
+		<image src="../../images/search.png"/><text style="margin:50rpx 120rpx;line-height:80rpx" type="text">点此搜美食</text>
+	</navigator>
+<view class="VerticalBox">
+  <scroll-view class="VerticalNav nav" scroll-y scroll-with-animation scroll-top="{{VerticalNavTop}}" style="height:calc(100vh - 375rpx)">
+    <view class="cu-item {{index==TabCur?'text-green cur':''}}"  wx:for="{{list}}" wx:key bindtap='tabSelect' data-id="{{index}}">
+     {{item.name}}
+    </view>
+  </scroll-view>
+  <scroll-view class="VerticalMain" scroll-y scroll-with-animation style="height:calc(100vh - 250rpx)" scroll-into-view="main-{{MainCur}}" bindscroll="VerticalMain">
+    <view class="padding-top padding-lr" wx:for="{{list}}" wx:key id="main-{{index}}">
+      <view class='cu-bar solid-bottom bg-white'>
+        <view class='action'>
+          <text class='cuIcon-title text-green'></text>{{item.name}}</view>
+      </view>
+      <view class="cu-list menu-avatar"   data-skeleton-list data-skeleton-hide="hideGoods" hidden="{{!hideGoods}}">
+       <block wx:for="{{disheslist}}"  wx:key="key" wx:for-index="idx" wx:for-item="newitem">
+       					<view class="dishesbox" wx:if="{{index == newitem.typeid}}" data-id="{{newitem.id}}"  hover-class="itemhover" bindtap="fngotofoodview">
+       						<view class="dishesimg_box">
+       							<image class="dishimg" src="http://192.168.43.183:8000/static/uploadimg/{{newitem.imgurl}}"></image>
+       						</view>
+       						<view class="dishestext">
+       							<view class="dish_name">{{newitem.proname}}</view>
+								<text class="cu-tag line-gren radius" style="margin-top: 10rpx;">{{item.name}}</text>
+								<text class="cu-tag line-gren radius" style="margin-top: 10rpx;">推荐</text>
+								<text class="cu-tag line-gren radius" style="margin-top: 10rpx;">法式</text>
+       							<view class="line">
+       								<view class="dish_price">￥{{newitem.price}}</view>
+       								<view class="dish_amount">
+       									<view class="hide{{newitem.procount}}" data-id="{{newitem.id}}" data-price="{{newitem.price}}" data-count="{{newitem.procount}}" data-proname="{{newitem.proname}}" data-imgurl="{{newitem.imgurl}}" catchtap="fnjian">
+       										<image src="../../images/btnsubt.png" style="width: 44rpx;height: 44rpx;"></image>
+       									</view>
+       									<view class="dish_num hide{{newitem.procount}}" dish-num="{{newitem.id}}">{{newitem.procount}}</view>
+       									<view data-id="{{newitem.id}}" data-price="{{newitem.price}}" data-count="{{newitem.procount}}"  data-proname="{{newitem.proname}}" data-imgurl="{{newitem.imgurl}}" catchtap="fnjia">
+       										<image src="../../images/btnplus.png" style="width: 44rpx;height: 44rpx;"></image>
+       									</view>
+       								</view>
+       							</view>
+       						</view>
+       					</view>
+			</block>		
+	  </view>
+
+    </view>
+  </scroll-view>
+</view>
+</view>
+<!-- 合计 提交订单 -->
+<view class='allselected'>
+	<view class="allselected-left">
+		<view class="allselected-title" bindtap="onChangeShowState">
+			<image class="dishes_png" src="../../images/dishes.png"></image>
+		</view>
+
+		<view class="allprices">
+			<text>￥{{sumprice}}.00</text>
+			<text class="dish_text original_price"></text>
+			<text class="dish_text">{{else_infor}}</text>
+		</view>
+	</view>
+	<view class="allselected-right" hover-class="hoverclass" bindtap="fntap">
+		{{btntxt}}
+	</view>
+</view>
+
+
+<!-- 购物车 -->
+<view class="page-section-spacing hide{{showView?'show':''}}">
+
+		<view style="background-color: #FEF6DF;height: 80rpx;padding:25rpx 30rpx;">
+    
+		<view><text>已选商品</text><text style="float: right;">清空</text> </view>
+    </view>
+	<scroll-view scroll-y="true" style="max-height:650rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+		<view style="padding:0 15rpx ;">
+			
+      <view style="margin-bottom: 20rpx;width: 100%;height:120rpx ;">
+        <block wx:for="{{disheslist}}"  wx:key="key" wx:for-index="idx" wx:for-item="boxitem">
+          <view class="fooditem hide{{boxitem.procount}}" hover-class="itemhover" style="height:120rpx;margin-top:20rpx">
+            <image src="http://192.168.43.183:8000/static/uploadimg/{{boxitem.imgurl}}"  style="width:120rpx;height: 120rpx;float: left;border-radius: 10rpx;" />
+            <view class="rightbox" style="margin-left:15rpx;float:left;">
+              <view>{{boxitem.proname}}</view>
+            <view  style="width:580rpx;margin-top:26rpx">
+              <view class="dish_price" style="float:left">￥{{boxitem.price}}</view>
+              <view class="dish_amount" style="float: right;">
+                <view class="hide{{boxitem.procount}}" bindtap="fnjian" data-proname="{{boxitem.proname}}" data-imgurl="{{boxitem.imgurl}}" data-id="{{boxitem.id}}" data-price="{{boxitem.price}}" data-count="{{boxitem.procount}}">
+                  <image src="../../images/btnsubt.png" style="width: 42rpx;height: 42rpx;"></image>
+                </view>
+                <view class="dish_num hide{{boxitem.procount}}" style="padding:0 13rpx">{{boxitem.procount}}</view>
+                <view bindtap="fnjia" data-id="{{boxitem.id}}" data-proname="{{boxitem.proname}}" data-imgurl="{{boxitem.imgurl}}" data-price="{{boxitem.price}}" data-count="{{boxitem.procount}}">
+                  <image src="../../images/btnplus.png" style="width: 42rpx;height: 42rpx;"></image>
+                </view>
+              </view>
+            </view>
+            
+            </view>
+          </view>
+        </block>
+
+        	
+
+        
+         <view style="height:40rpx"></view>
+			</view>
+
+      
+
+
+		</view>
+	</scroll-view>
+</view>
+<!-- 结算 -->
+<view class="sendinfobox" style="display:{{isshowpersoninfo}};z-index:99 ">
+			<view class="btngotobuy" hover-class="hoverclass" bindtap="fnback">返回</view>
+      <view class="foodformbox">
+          <view class="fline">客户姓名：<input  type="text" bindinput="fnsname" value="{{sname}}" placeholder="必填" /></view>
+          <view class="fline">客户电话：<input type="text" bindinput="fntel" value="{{stel}}" placeholder="必填" /></view>
+          <view class="fline">烹饪时间：
+					<picker mode="date" value="{{date}}" start="2020-01-01" end="2030-01-01" bindchange="bindDateChange">
+          <input type="text"  value="{{ptime}}" placeholder="可选" />
+  				</picker>
+
+					</view>
+          <view class="fline">配送地址：<input bindinput="fnaddress"   value="{{saddress}}" placeholder="楼栋、单元、门牌"/></view>
+          <view class="fline">备注信息：<input type="text" bindinput="fnmemo" placeholder="可选" /></view>
+      </view>
+			<view class="pricebox">总价：￥{{sumprice}}.00</view>
+  </view>

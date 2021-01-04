@@ -1,0 +1,38 @@
+<view class="liebiao bg-white" style="width: 100%;padding:35rpx 30rpx;">
+	<view style="height: 110rpx;">头像
+	<view class="cu-avatar round margin-left" style="background-image:url(http://192.168.43.183:8000/static/uploadimg/head.png);width:73rpx;height: 73rpx;margin-top: 14rpx;float:right">
+			   <image src="{{headimg}}" style="height:73rpx;width:73rpx;border-radius:50%"></image>
+	</view>
+	</view>
+	<view>昵称
+	    <text class="cuIcon-playfill"></text> 
+		<input placeholder="{{username}}"  bindinput="fninputusername"></input>
+	</view>
+	<view>生日
+		<text class="cuIcon-playfill"></text>
+		<picker mode="date" value="{{date}}" start="1920-01-01" end="2010-01-01" bindchange="DateChange" >
+		
+			{{thedate}}
+		 
+		</picker>
+	</view> 
+	<view>手机号
+	    <text class="cuIcon-playfill"></text> 
+	    <input placeholder="{{tel}}"  bindinput="fninputtel"></input>
+	</view>
+	<view>城市
+		<text class="cuIcon-playfill"></text>
+		<picker mode="region" bindchange="RegionChange" value="{{region}}" custom-item="{{customItem}}">
+			<view class="picker">
+				{{region}}
+			</view>
+		</picker>
+	</view>
+	<view>职业 
+	  <text class="cuIcon-playfill"></text> 
+		<input placeholder="{{occupation}}"  bindinput="fninputoccupation"></input>
+  </view>
+		<button bindtap="edit" class="cu-btn sm round" role="button" aria-disabled="false" style="width: 600rpx;height: 70rpx;margin:100rpx 55rpx;background-color:#483865;color: white;">
+		保存
+		</button>
+</view>

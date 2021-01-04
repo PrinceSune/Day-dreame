@@ -1,0 +1,128 @@
+<!--pages/main/main.wxml-->
+<view>
+<swiper style="height: 580rpx;" class="screen-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+  <swiper-item wx:for="{{swiperList}}" data-index="{{index}}" >
+    <image src="http://192.168.43.183:8000/static/uploadimg/{{item.url}}" mode="aspectFill" wx:if="{{item.type=='image'}}" style=""></image>
+  </swiper-item> 
+</swiper>
+<view class="diancan" style=" margin:-220rpx 0;width: 100%;height:600rpx;position: absolute;">
+  <view style="width: 100%;padding:30rpx 35rpx 0;height: 195rpx;background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,1));">
+	<view style="color: #fff;font-size: 36rpx; margin-bottom: 15rpx;font-weight: bold;">白日梦想| 法餐厅Day dream，欢迎你</view>
+	<view style="color: #fff;font-size: 20rpx;margin-bottom: 20rpx;">最近的 白日梦想| 法餐厅Day dream 距我0km</view>
+  </view>
+	<view class="radius shadow bg-white" style="width: 680rpx;height:185rpx;margin:-55rpx 35rpx;">
+		<navigator open-type="navigate" hover-class='none' url="/pages/reservation/reservation" style="width: 340rpx;float: left;">
+			<view style="float: left;padding: 25rpx;line-height: 50rpx;">
+				<view class="text-black" style="font-size: 28rpx;font-weight: bold;">预约就餐</view>
+				<view class="text-grey text-xs">预约享受美食</view>
+				<view class="text-sm  text-mauve">立即排队 <text class="cuIcon-playfill" style="font-size: 25rpx;"></text></view>
+			</view>
+			<view style="float: right;margin-right: 25rpx;padding-top:32rpx ;">
+				<image src="../../images/paidui.jpg" style="width: 120rpx;height: 120rpx;"></image>
+			</view>
+		</navigator> 
+		<navigator open-type="navigate" hover-class='none' url="/pages/dishes/dishes"  style="float: left;width: 339rpx;">
+			<view style="float: left;padding: 25rpx;line-height: 50rpx;">
+				<view class="text-black text-lg"  style="font-size: 28rpx;font-weight: bold;">商家外卖</view>
+				<view class="text-grey text-xs">美食立刻送到家</view>
+				<view class="text-sm  text-mauve">去点外卖  <text class="cuIcon-playfill" style="font-size: 25rpx;"></text></view>
+			</view> 
+			<view style="float: right;margin-right: 25rpx;padding-top:32rpx ;">
+				<image src="../../images/waimai.jpg" style="width: 120rpx;height: 120rpx;"></image>
+			</view> 
+		</navigator>
+	</view>
+</view>
+  <view class="padding bg-white" style="margin-top:100rpx ;">
+    <view class="flex">
+      <navigator open-type="navigate" hover-class='none' url="/pages/vipnum/vipnum"  class="flex-sub bg-cyan padding-sm margin-xs radius shadow-warp">
+		 
+		  Day dream| 会员码
+		  <view style="margin-top:10rpx;font-size: 19rpx;">请向服务员展示会员码</view>
+	  </navigator>
+      <navigator open-type="navigate" hover-class='none' url="/pages/vipnum/vipnum"   class="flex-sub bg-grey padding-sm margin-xs radius shadow-warp">
+		  Day dream| 推介
+		  <view style="margin-top:10rpx;font-size: 19rpx;">获取最新资讯及活动</view>
+	  </navigator>
+    </view>
+    <view class="flex  p-xs margin-bottom-sm mb-sm">
+      <navigator open-type="navigate" hover-class='none' url="/pages/vipnum/vipnum"   class="aaa flex-twice bg-red padding-sm margin-xs radius shadow-warp">
+		  会员储值
+	  </navigator>
+      <navigator open-type="navigate" hover-class='none' url="/pages/myorder/myorder"   class="aaa flex-twice bg-green padding-sm margin-xs radius shadow-warp">
+		  我的订单
+	  </navigator>
+      <navigator open-type="navigate" hover-class='none' url="/pages/vipnum/vipnum"   class="aaa flex-twice bg-mauve padding-sm margin-xs radius shadow-warp">
+		  我的卡包
+	  </navigator>
+    </view>
+  </view>
+  
+  <!--推荐-->
+  <view class="today_dishes">
+   <view>菜品推荐</view>
+    <scroll-view class="banquet-center" scroll-x style="margin-top:20rpx">
+  
+      <view class="banquet-center-view">
+  
+        <view class="banquet-item" wx:for="{{banquetarr}}" key="idx" wx:for-item="newitem" >
+ 
+		  
+		  <view data-id="{{newitem.id}}"  hover-class="itemhover" bindtap="fngotofoodview" class="bg-img flex align-end" style="background-image: url('http://192.168.43.183:8000/static/uploadimg/{{newitem.url}}');height: 180rpx;width: 260rpx;border-radius:10rpx">
+		      <view class="bg-shadeBottom padding padding-top-xl flex-sub" style="overflow: hidden">
+		        <text style="white-space:nowrap;top:13rpx;position:relative">{{newitem.name}}</text>
+		      </view>
+		  </view>
+        </view>
+  
+      </view>
+  
+    </scroll-view>
+  </view>
+
+  <view class="cookerlist">
+   <view style="margin-left: 5rpx;width:100% " style="float:left">厨师</view>
+  <navigator open-type="navigate" hover-class='none' url="/pages/chef/chefList" style="float:right;margin-right:25rpx;font-size:27rpx;color:#E54D42">全部厨师</navigator >
+  <view style="clear:both"></view>
+  <view class="p-xs margin-bottom-sm mb-sm">
+      <view data-id="2" bindtap="jumpto" class="cooker bg-white padding-xs radius shadow-warp">
+		  <image class="radius shadow-warp" src="../../images/kong.jpg"></image>
+	  <view class="text-black"><text>明星主厨：</text>Kong</view>
+	  </view>
+      <view data-id="1" bindtap="jumpto" class="cooker cooker-mid bg-white padding-xs radius shadow-warp">
+		  <image class="radius shadow-warp" src="../../images/luyuan.jpg"></image>
+		  <view class="text-black"><text>厨师长：</text>陆远</view>
+	  </view>
+      <view  data-id="3" bindtap="jumpto"class="cooker bg-white padding-xs radius shadow-warp">
+		  <image class="radius shadow-warp" src="../../images/cooker3.jpg"></image>
+		<view class="text-black"><text>新晋厨师：</text>蔡明骏</view>
+	  </view>
+    </view>
+  </view>
+  <view style="clear: both;"></view>
+  <view class="address">
+   <view>门店地址</view>
+  <view class="add-card radius">
+      <view class="">
+        <image src="../../images/0.jpg" style="width: 114rpx;height: 114rpx;border-radius: 10rpx;"></image>
+  	  </view>
+      <view style="width: 415rpx;padding:0 14rpx;">
+  		  <view class="text-sm">白日梦想| 法餐厅Day dream</view>
+		  <view class="text-gray" style="font-size: 18rpx;line-height: 24rpx;margin-top: 6rpx;">
+			  <view>重庆市巴南区龙洲湾街道尚文大道906号 | 距离我  0.5 Km</view>
+			  <view>美食</view>
+		  </view>
+  	  </view>
+      <view style="border-left: 1rpx solid #ddd;width: 114rpx;height: 100rpx;margin-top: 7rpx;padding-left:38rpx;">
+  		 <text class="cuIcon-dianhua text-black" style="font-size: 40rpx;line-height: 100rpx;">
+  		 </text>
+  	  </view>
+    </view>
+  </view>
+</view>
+<view class="allselected" hidden='{{showhide}}'>
+	<view hover-class='none'>
+	  <button  open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="round text-white gatebutton"> 登录账号，获得完整体验</button>
+	</view>
+</view>
+<view class='mask' hidden='{{maskFlag}}'></view>

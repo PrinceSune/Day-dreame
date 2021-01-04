@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/main/main",
+    "pages/login/login",
+    "pages/reservation/reservation",
+    "pages/myorder/myorder",
+    "pages/vipgrade/vipgrade",
+    "pages/dishes/dishes",
+    "pages/myinform/myinform",
+    "pages/chef/chefList",
+    "pages/chefview/chefview",
+    "pages/dishesview/dishesview",
+    "pages/vipnum/vipnum", 
+	  "pages/mycard/mycard",
+    "pages/mine/mine",
+    "pages/leavemessage/leavemessage" 
+  ],
+  "window": { 
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "白日梦想| 法餐厅Day dream",
+    "navigationBarTextStyle": "black"
+  },
+    "tabBar": {
+	  "color":"#C7C7C7",
+	  "selectedColor":"#483865",
+      "borderStyle": "white",
+      "list": [
+        {
+          "pagePath": "pages/main/main",
+          "text": "首页",
+          "iconPath": "images/tabbar/main.png",
+          "selectedIconPath": "images/tabbar/main_cur.png"
+        },
+        {
+          "pagePath": "pages/mine/mine",
+          "text": "我的",
+          "iconPath": "images/tabbar/mine.png",
+          "selectedIconPath": "images/tabbar/mine_cur.png"
+        }
+      ] 
+    },
+  "sitemapLocation": "sitemap.json"
+}

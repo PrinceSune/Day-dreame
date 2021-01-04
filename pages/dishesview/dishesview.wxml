@@ -1,0 +1,60 @@
+<!--pages/dishesview/dishesview.wxml-->
+<block wx:for="{{dishesview}}" wx:key="key" wx:for-index="idx" wx:for-item="item">
+	<view class="bg-white" style="padding: 40rpx 30rpx;">
+		<view class="text-black" style="font-size: 35rpx;letter-spacing: 2rpx;font-weight: bold;line-height: 35rpx;">{{item.proname}}<text
+			 class="cu-tag bg-green sm radius padding recommend{{item.istop}}" style="font-weight: lighter;margin:0 10rpx ;"><text class="cuIcon-medal lg text-whight"></text>推荐</text> </view>
+		<view class="sm" style="line-height: 50rpx;margin: 10rpx 0;">{{item.descriptions}}</view>
+		<view style="font-weight: bold;">¥{{item.price}}</view>
+		<view class="dish_tag">
+			<view class="padding-xs">
+				<view class="cu-tag line-red sm">
+					入口即化
+				</view>
+			</view>
+			<view class="padding-xs">
+				<view class="cu-tag line-red sm">
+					精心调制
+				</view>
+			</view>
+			<view class="padding-xs">
+				<view class="cu-tag line-red sm">
+					法式西餐
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="bg-white padding">
+		<image src="http://192.168.43.183:8000/static/uploadimg/{{item.imgurl}}" mode="widthFix" style="width: 100%;max-height:550rpx"></image>
+	</view>
+	<view class="bg-white dishcount">
+		<view class="dish_num hide{{item.procount}}" data-id="{{item.id}}" data-price="{{item.price}}" data-count="{{item.procount}}" data-proname="{{ntem.proname}}" data-imgurl="{{item.imgurl}}" bindtap="fnjia">
+			<image src="../../images/btnplus.png" style="width: 52rpx;height: 52rpx;"></image>
+		</view>
+		<view class="dish_num hide{{item.procount}}" dish-num="{{item.id}}">{{item.procount}}</view>
+		<view class="hide{{item.procount}}" data-id="{{item.id}}" data-price="{{item.price}}" data-count="{{item.procount}}" data-proname="{{item.proname}}" data-imgurl="{{item.imgurl}}" bindtap="fnjian">
+			<image src="../../images/btnsubt.png" style="width: 52rpx;height: 52rpx;"></image>
+		</view>
+	</view>
+	<view class="address">
+	 <view>门店地址</view>
+	<view class="add-card radius">
+	    <view class="">
+	      <image src="../../images/0.jpg" style="width: 114rpx;height: 114rpx;border-radius: 10rpx;"></image>
+		  </view>
+	    <view style="width: 415rpx;padding:0 14rpx;">
+			  <view class="text-sm">白日梦想| 法餐厅Day dream</view>
+			  <view class="text-gray" style="font-size: 18rpx;line-height: 24rpx;margin-top: 6rpx;">
+				  <view>重庆市巴南区龙洲湾街道尚文大道906号 | 距离我  0.5 Km</view>
+				  <view>美食</view>
+			  </view>
+		  </view>
+	    <view style="border-left: 1rpx solid #ddd;width: 114rpx;height: 100rpx;margin-top: 7rpx;padding-left:38rpx;">
+			 <text class="cuIcon-dianhua text-black" style="font-size: 40rpx;line-height: 100rpx;">
+			 </text>
+		  </view>
+	  </view>
+	</view>
+	<view class="allselected" style="display:{{isshow}}">
+		  <button class="round text-white gatebutton"  bindtap="fnjia" data-id="{{item.id}}" data-price="{{item.price}}" data-count="{{item.procount}}" data-proname="{{item.proname}}" data-imgurl="{{item.imgurl}}">添加到菜品篮</button>
+	</view>
+</block>

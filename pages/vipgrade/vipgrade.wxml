@@ -1,0 +1,79 @@
+<view class="padding margin-left text-bold">
+	我的会员等级
+</view>
+<swiper bindchange="currentchange" style="height: 905rpx;" previous-margin="47rpx" next-margin="68rpx">
+	<swiper-item>
+		<view>
+			<view class="cu-avatar">
+				新会员
+			</view>
+			<view class="points">0</view>
+			<view class="mypoints">我的积分</view>
+			<view class="myright">
+				<view>
+					<view class="icon cuIcon-evaluate_fill"></view>
+					<view class="detail">1倍积分奖励</view>
+				</view>
+				<view>
+					<view class="icon cuIcon-presentfill"></view>
+					<view class="detail">节日礼包</view>
+				</view>
+			</view>
+		</view>
+		<text class="maska"></text>
+	</swiper-item>
+	<swiper-item>
+		<view>
+			<view class="cu-avatar">
+				中级会员
+			</view>
+			<view class="points">0</view>
+			<view class="mypoints">我的积分</view>
+			<view class="myright">
+				<view>
+					<view class="icon cuIcon-evaluate_fill"></view>
+					<view class="detail">1倍积分奖励</view>
+				</view>
+				<view>
+					<view class="icon cuIcon-crownfill"></view>
+					<view class="detail">菜品9折</view>
+				</view>
+				<view>
+					<view class="icon cuIcon-presentfill"></view>
+					<view class="detail">节日礼包</view>
+				</view>
+			</view>
+			
+		</view>
+		<text class="mask"></text>
+	</swiper-item>
+	<swiper-item>
+		<view>
+			<view class="cu-avatar">
+				高级会员
+			</view>
+			<view class="points">0</view>
+			<view class="mypoints">我的积分</view>
+			<view class="myright">
+				<view>
+					<view class="icon cuIcon-evaluate_fill"></view>
+					<view class="detail">1倍积分奖励</view>
+				</view>
+				<view>
+					<view class="icon cuIcon-crownfill"></view>
+					<view class="detail">菜品8折</view>
+				</view>
+				<view>
+					<view class="icon cuIcon-presentfill"></view>
+					<view class="detail">节日礼包</view>
+				</view>
+			</view>
+		</view>
+		<text class="mask"></text>
+	</swiper-item>
+</swiper>
+<view class="padding margin-left lg" style="border-bottom:1rpx solid #ccc;height:110rpx;width:680rpx">
+	等级说明
+</view>
+<view class="padding text-sm"><text class="text-grey">升级规则：</text><text class="margin-left">{{upgrade}} </text> </view>
+<view class="padding-left text-sm"><text class="text-grey">降级规则：</text><text class="margin-left">无</text> </view>

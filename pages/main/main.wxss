@@ -1,0 +1,96 @@
+/* pages/main/main.wxss */
+@import "../../colorui/main.wxss";
+@import "../../colorui/icon.wxss";
+page{
+    background-color: #FAFAFA;
+    height: 100%;
+}
+
+.today_dishes{
+	padding: 0 40rpx;
+}
+.banquet-center-view{
+  display: flex;
+}
+.banquet-item{
+  margin-right:16rpx;
+}
+.bg-shadeBottom, .flex-sub{
+	border-radius: 10rpx!important;
+}
+
+.cookerlist{
+	margin-top: 50rpx;
+	padding: 25rpx 30rpx;
+	height: 445rpx;
+}
+.cooker{
+	float: left;
+	width: 215rpx;
+	margin-top: 20rpx;
+	text-align: center;
+}
+.cooker-mid{
+	margin:20rpx 23rpx;
+}
+.cooker image{
+	width: 171rpx;
+	height: 228rpx;
+	margin:10rpx 12rpx 3rpx;
+}
+.text-black{
+	font-size:22rpx ;
+}
+.cooker text{
+	font-weight: bold;
+}
+.address{
+	padding: 12rpx 35rpx;
+}
+.add-card{
+	width: 680rpx;
+	height: 150rpx;
+	border: 1rpx solid #e6e6e6;
+	margin: 25rpx 0 40rpx;
+	padding:18rpx ;
+}
+.add-card>view{
+	float: left;
+}
+.allselected{
+  width: 100%;
+  height: 150rpx;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  bottom: 0;
+  border-top:1rpx solid #ddd;
+  box-shadow: -1rpx 0 2rpx 2rpx #eee;
+  background-color: #fff;
+  justify-content: space-between;
+}
+.gatebutton{
+	background-color: #FFA4A4;
+	font-size: 28rpx;
+	padding: 4rpx 120rpx;
+  width:570rpx;
+  margin-left:90rpx
+}
+.hide{
+ display: none;
+}
+.show{ 
+ display: block;
+}
+.mask{
+  width:100%;
+  height:100%;
+  position:fixed;
+  background-color:#666;
+  z-index:9999;
+  top:-150rpx;
+  left:0;
+  opacity:0.5;
+}

@@ -1,0 +1,14 @@
+/* pages/component/nav/nav.wxss */
+page{
+	height: 100%;
+}
+.cu-timeline .cu-time{
+ width: 200rpx;
+}
+.content,.bg-purple,.shadow-blur{
+ background-image:url(https://image.weilanwl.com/color2.0/cardBg.png);
+ background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+}

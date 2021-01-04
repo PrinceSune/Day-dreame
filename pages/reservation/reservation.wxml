@@ -1,0 +1,144 @@
+<view class="cu-timeline">
+  <view class="cu-time">今天 / {{itemLists[0].week}}</view>
+  <view class="cu-item text-grey cur  cuIcon-evaluate_fill">
+    <view bindtap="showModal" data-target="DialogModal1" data-datetime="{{itemLists[0].date}}日的午餐" role="button" aria-disabled="false" class="content bg-grey shadow-blur">
+      <view style="font-size: 35rpx;font-weight: bold;">预定:</view>
+      <view style="text-align: center;">
+      		<text style="margin: 30 30rpx;">{{itemLists[0].date}}</text>  午餐：12:00/15:00  
+      </view>
+    </view>
+  </view>
+  <view class="cu-item text-blue ">
+    <view bindtap="showModal" data-target="DialogModal1" data-datetime="{{itemLists[0].date}}日的晚餐" class="content bg-blue shadow-blur">
+      <view style="font-size: 35rpx;font-weight: bold;">预定:</view>
+      <view style="text-align: center;">
+      		<text style="margin: 30 30rpx;">{{itemLists[0].date}}</text>  晚餐：18:00/20:00  
+      </view>
+    </view>
+  </view>
+  <view class="cu-time">{{itemLists[1].date}} / {{itemLists[1].week}}</view>
+  <view class="cu-item text-purple cuIcon-evaluate_fill">
+    <view bindtap="showModal" data-target="DialogModal1" data-datetime="{{itemLists[1].date}}日的午餐" class="content bg-purple shadow-blur">
+      <view style="font-size: 35rpx;font-weight: bold;">预定:</view>
+      <view style="text-align: center;">
+      		<text style="margin: 30 30rpx;">{{itemLists[1].date}}</text>  午餐：12:00/15:00  
+      </view>
+    </view>
+  </view>
+  <view class="cu-item text-mauve">
+    <view bindtap="showModal" data-target="DialogModal1" data-datetime="{{itemLists[1].date}}日的晚餐" class="bg-mauve content">
+      <view style="font-size: 35rpx;font-weight: bold;">预定:</view>
+      <view style="text-align: center;">
+      		<text style="margin: 30 30rpx;">{{itemLists[1].date}}</text>  晚餐：18:00/20:00  
+      </view>
+    </view>
+  </view>
+  <view class="cu-time">{{itemLists[2].date}} / {{itemLists[2].week}}</view>
+  <view class="cu-item cur cuIcon-evaluate_fill text-pink">
+    <view bindtap="showModal" data-target="DialogModal1" data-datetime="{{itemLists[2].date}}日的午餐" class="content bg-pink shadow-blur">
+      <view style="font-size: 35rpx;font-weight: bold;">预定:</view>
+      <view style="text-align: center;">
+      		<text style="margin: 30 30rpx;">{{itemLists[2].date}}</text>  午餐：12:00/15:00  
+      </view>
+    </view>
+  </view>
+  <view class="cu-item text-red">
+    <view bindtap="showModal" data-target="DialogModal1" data-datetime="{{itemLists[2].date}}日的晚餐" class="content bg-red shadow-blur">
+     <view style="font-size: 35rpx;font-weight: bold;">预定:</view>
+     <view style="text-align: center;">
+     		<text style="margin: 30 30rpx;">{{itemLists[2].date}}</text>  晚餐：18:00/20:00  
+     </view>
+    </view>
+  </view>
+  <view class="cu-time">{{itemLists[3].date}} / {{itemLists[3].week}}</view>
+  <view class="cu-item text-green cuIcon-evaluate_fill">
+    <view bindtap="showModal" data-target="DialogModal1" data-datetime="{{itemLists[3].date}}日的午餐" class="content bg-green shadow-blur">
+      <view style="font-size: 35rpx;font-weight: bold;">预定:</view>
+      <view style="text-align: center;">
+      		<text style="margin: 30 30rpx;">{{itemLists[3].date}}</text>  午餐：12:00/15:00  
+      </view>
+    </view>
+  </view>
+  <view class="cu-item text-orange">
+    <view bindtap="showModal" data-target="DialogModal1" data-datetime="{{itemLists[3].date}}日的晚餐" class="bg-orange content">
+      <view style="font-size: 35rpx;font-weight: bold;">预定:</view>
+      <view style="text-align: center;">
+      		<text style="margin: 30 30rpx;">{{itemLists[3].date}}</text>  晚餐：18:00/20:00  
+      </view>
+    </view>
+  </view>
+  <view class="cu-time">{{itemLists[4].date}} / {{itemLists[4].week}}</view>
+  <view class="cu-item cur text-yellow cuIcon-evaluate_fill">
+    <view bindtap="showModal" data-target="DialogModal1" data-datetime="{{itemLists[4].date}}日的午餐" class="content bg-yellow shadow-blur text-yellow" >
+      <view style="font-size: 35rpx;font-weight: bold;color:white">预定:</view>
+      <view style="text-align: center;;color:white">
+      		<text style="margin: 30 30rpx;color:white">{{itemLists[4].date}}</text>  午餐：12:00/15:00  
+      </view>
+    </view>
+  </view>
+  <view class="cu-item text-olive">
+    <view bindtap="showModal" data-target="DialogModal1" data-datetime="{{itemLists[4].date}}日的晚餐" class="content bg-olive shadow-blur">
+      <view style="font-size: 35rpx;font-weight: bold;">预定:</view>
+      <view style="text-align: center;">
+      		<text style="margin: 30 30rpx;">{{itemLists[4].date}}</text>  晚餐：18:00/20:00  
+      </view>
+    </view>
+  </view>
+  <view class="cu-time">{{itemLists[5].date}} / {{itemLists[5].week}}</view>
+  <view class="cu-item text-brown cuIcon-evaluate_fill">
+    <view bindtap="showModal" data-target="DialogModal1" data-datetime="{{itemLists[5].date}}日的午餐" class="content bg-brown shadow-blur">
+      <view style="font-size: 35rpx;font-weight: bold;">预定:</view>
+      <view style="text-align: center;">
+      		<text style="margin: 30 30rpx;">{{itemLists[5].date}}</text>  午餐：12:00/15:00  
+      </view>
+    </view>
+  </view>
+  <view class="cu-item text-blue">
+    <view bindtap="showModal" data-target="DialogModal1" data-datetime="{{itemLists[5].date}}日的晚餐" class=" bg-blue content">
+      <view style="font-size: 35rpx;font-weight: bold;color:white">预定:</view>
+      <view style="text-align: center;">
+      		<text style="margin: 30 30rpx;color:white">{{itemLists[5].date}}</text>  晚餐：18:00/20:00  
+      </view>
+    </view>
+  </view>
+  <view class="cu-time">{{itemLists[6].date}} / {{itemLists[6].week}}</view>
+  <view class="cu-item text-cyan cur cuIcon-evaluate_fill">
+    <view bindtap="showModal" data-target="DialogModal1" data-datetime="{{itemLists[6].date}}日的午餐" class="content bg-cyan shadow-blur">
+      <view style="font-size: 35rpx;font-weight: bold;">预定:</view>
+      <view style="text-align: center;">
+      		<text style="margin: 30 30rpx;">{{itemLists[6].date}}</text>  午餐：12:00/15:00  
+      </view>
+    </view>
+  </view>
+  <view class="cu-item text-purple ">
+    <view bindtap="showModal" data-target="DialogModal1" data-datetime="{{itemLists[6].date}}日的晚餐" class="content bg-purple shadow-blur text-white">
+      <view style="font-size: 35rpx;font-weight: bold;color:white">预定:</view>
+      <view style="text-align: center;">
+      		<text style="margin: 30 30rpx;color:white">{{itemLists[6].date}}</text>  晚餐：18:00/20:00  
+      </view>
+    </view>
+  </view>
+</view>
+
+  <view class="cu-modal {{modalName=='DialogModal1'?'show':''}}" style="width: 100%;margin-left:1rpx;">
+            <view class="cu-dialog">
+              <view class="cu-bar bg-white justify-end">
+                <view class="content">预约就餐</view>
+                <view class="action" bindtap="hideModal">
+                  <text class="cuIcon-close text-red"></text>
+                </view>
+              </view>
+              <view class="padding-xl text-black">
+                确认预定  {{datetime}}  吗？
+              </view>
+              <view class="cu-bar bg-white justify-end">
+                <view class="action">
+                  <button class="cu-btn line-green text-green" bindtap="hideModal">取消</button>
+                  <button class="cu-btn bg-green margin-left" bindtap="toSure">确定</button>
+
+                </view>
+              </view>
+            </view>
+          </view>
+			   
+

@@ -1,0 +1,256 @@
+<!--
+此文件为开发者工具生成，生成时间: 2020/6/20 上午1:32:23 
+使用方法：
+在 pages\dishes\dishes.wxml 引入模板
+
+```
+<import src="dishes.skeleton.wxml"/>
+<template is="skeleton" wx-if="{{loading}}" />
+```
+
+在 pages\dishes\dishes.wxss 中引入样式
+```
+@import "./dishes.skeleton.wxss";
+```
+
+更多详细信息可以参考文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/skeleton.html
+-->
+<template name="skeleton">
+  <view class="sk-container">
+    <view class="listbox">
+      <navigator class="searchbox" hover-class="none" open-type="navigate">
+        <image class="sk-image">
+        </image>
+        <text style="margin:25px 60px;line-height:40px" class="sk-transparent sk-text-32-5000-833 sk-text">
+          点此搜美食
+        </text>
+      </navigator>
+      <view class="VerticalBox">
+        <scroll-view scroll-with-animation="true" scroll-y="true" class="VerticalNav nav" scroll-top="0" style="height:calc(100vh - 187px)">
+          <view class="cu-item text-green cur sk-transparent sk-text-34-4444-764 sk-text sk-pseudo sk-pseudo-circle" data-id="0" style="background-position-x: 50%;">
+            前菜
+          </view>
+          <view class="cu-item sk-transparent sk-text-34-4444-714 sk-text" data-id="1" style="background-position-x: 50%;">
+            主菜
+          </view>
+          <view class="cu-item sk-transparent sk-text-34-4444-341 sk-text" data-id="2" style="background-position-x: 50%;">
+            生蚝吧
+          </view>
+          <view class="cu-item sk-transparent sk-text-34-4444-817 sk-text" data-id="3" style="background-position-x: 50%;">
+            汤品
+          </view>
+          <view class="cu-item sk-transparent sk-text-34-4444-632 sk-text" data-id="4" style="background-position-x: 50%;">
+            甜品
+          </view>
+          <view class="cu-item sk-transparent sk-text-34-4444-202 sk-text" data-id="5" style="background-position-x: 50%;">
+            冰淇淋
+          </view>
+          <view class="cu-item sk-transparent sk-text-34-4444-425 sk-text" data-id="6" style="background-position-x: 50%;">
+            套餐
+          </view>
+        </scroll-view>
+        <scroll-view scroll-with-animation="true" scroll-y="true" class="VerticalMain" scroll-into-view="main-0" style="height:calc(100vh - 125px)">
+          <view class="padding-top padding-lr" id="main-0">
+            <view class="cu-bar solid-bottom bg-white sk-pseudo sk-pseudo-circle">
+              <view class="action sk-transparent">
+                <text class="cuIcon-title text-green sk-pseudo sk-pseudo-circle">
+                </text>
+                前菜
+              </view>
+            </view>
+            <view class="cu-list menu-avatar" hidden="{{hideGoods}}">
+              <view class="dishesbox" data-id="1" hover-class="itemhover" style="border: none;">
+                <view class="dishesimg_box">
+                  <image class="dishimg sk-image">
+                  </image>
+                </view>
+                <view class="dishestext">
+                  <view class="dish_name sk-transparent sk-text-14-2857-708 sk-text">
+                    盐烤活体松香菇
+                  </view>
+                  <text class="cu-tag line-gren radius sk-transparent sk-text-14-2857-979 sk-text sk-pseudo sk-pseudo-circle" style="margin-top: 5px;">
+                    前菜
+                  </text>
+                  <text class="cu-tag line-gren radius sk-transparent sk-text-14-2857-255 sk-text sk-pseudo sk-pseudo-circle" style="margin-top: 5px;">
+                    推荐
+                  </text>
+                  <text class="cu-tag line-gren radius sk-transparent sk-text-14-2857-702 sk-text sk-pseudo sk-pseudo-circle" style="margin-top: 5px;">
+                    法式
+                  </text>
+                  <view class="line">
+                    <view class="dish_price sk-transparent sk-text-13-6364-131 sk-text">
+                      ￥188
+                    </view>
+                    <view class="dish_amount">
+                      <view data-count="0" data-id="1" data-imgurl="111.png" data-price="188" data-proname="盐烤活体松香菇">
+                        <image style="width: 22px;height: 22px;" class="sk-image">
+                        </image>
+                      </view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <view class="dishesbox" data-id="1" hover-class="itemhover" style="border: none;">
+                <view class="dishesimg_box">
+                  <image class="dishimg sk-image">
+                  </image>
+                </view>
+                <view class="dishestext">
+                  <view class="dish_name sk-transparent sk-text-14-2857-115 sk-text">
+                    盐烤活体松香菇
+                  </view>
+                  <text class="cu-tag line-gren radius sk-transparent sk-text-14-2857-618 sk-text sk-pseudo sk-pseudo-circle" style="margin-top: 5px;">
+                    前菜
+                  </text>
+                  <text class="cu-tag line-gren radius sk-transparent sk-text-14-2857-318 sk-text sk-pseudo sk-pseudo-circle" style="margin-top: 5px;">
+                    推荐
+                  </text>
+                  <text class="cu-tag line-gren radius sk-transparent sk-text-14-2857-905 sk-text sk-pseudo sk-pseudo-circle" style="margin-top: 5px;">
+                    法式
+                  </text>
+                  <view class="line">
+                    <view class="dish_price sk-transparent sk-text-13-6364-667 sk-text">
+                      ￥188
+                    </view>
+                    <view class="dish_amount">
+                      <view data-count="0" data-id="1" data-imgurl="111.png" data-price="188" data-proname="盐烤活体松香菇">
+                        <image style="width: 22px;height: 22px;" class="sk-image">
+                        </image>
+                      </view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <view class="dishesbox" data-id="1" hover-class="itemhover" style="border: none;">
+                <view class="dishesimg_box">
+                  <image class="dishimg sk-image">
+                  </image>
+                </view>
+                <view class="dishestext">
+                  <view class="dish_name sk-transparent sk-text-14-2857-215 sk-text">
+                    盐烤活体松香菇
+                  </view>
+                  <text class="cu-tag line-gren radius sk-transparent sk-text-14-2857-229 sk-text sk-pseudo sk-pseudo-circle" style="margin-top: 5px;">
+                    前菜
+                  </text>
+                  <text class="cu-tag line-gren radius sk-transparent sk-text-14-2857-62 sk-text sk-pseudo sk-pseudo-circle" style="margin-top: 5px;">
+                    推荐
+                  </text>
+                  <text class="cu-tag line-gren radius sk-transparent sk-text-14-2857-694 sk-text sk-pseudo sk-pseudo-circle" style="margin-top: 5px;">
+                    法式
+                  </text>
+                  <view class="line">
+                    <view class="dish_price sk-transparent sk-text-13-6364-31 sk-text">
+                      ￥188
+                    </view>
+                    <view class="dish_amount">
+                      <view data-count="0" data-id="1" data-imgurl="111.png" data-price="188" data-proname="盐烤活体松香菇">
+                        <image style="width: 22px;height: 22px;" class="sk-image">
+                        </image>
+                      </view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <view class="dishesbox" data-id="1" hover-class="itemhover" style="border: none;">
+                <view class="dishesimg_box">
+                  <image class="dishimg sk-image">
+                  </image>
+                </view>
+                <view class="dishestext">
+                  <view class="dish_name sk-transparent sk-text-14-2857-833 sk-text">
+                    盐烤活体松香菇
+                  </view>
+                  <text class="cu-tag line-gren radius sk-transparent sk-text-14-2857-798 sk-text sk-pseudo sk-pseudo-circle" style="margin-top: 5px;">
+                    前菜
+                  </text>
+                  <text class="cu-tag line-gren radius sk-transparent sk-text-14-2857-322 sk-text sk-pseudo sk-pseudo-circle" style="margin-top: 5px;">
+                    推荐
+                  </text>
+                  <text class="cu-tag line-gren radius sk-transparent sk-text-14-2857-506 sk-text sk-pseudo sk-pseudo-circle" style="margin-top: 5px;">
+                    法式
+                  </text>
+                  <view class="line">
+                    <view class="dish_price sk-transparent sk-text-13-6364-837 sk-text">
+                      ￥188
+                    </view>
+                    <view class="dish_amount">
+                      <view data-count="0" data-id="1" data-imgurl="111.png" data-price="188" data-proname="盐烤活体松香菇">
+                        <image style="width: 22px;height: 22px;" class="sk-image">
+                        </image>
+                      </view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <view class="dishesbox" data-id="1" hover-class="itemhover" style="border: none;">
+                <view class="dishesimg_box">
+                  <image class="dishimg sk-image">
+                  </image>
+                </view>
+                <view class="dishestext">
+                  <view class="dish_name sk-transparent sk-text-14-2857-691 sk-text">
+                    盐烤活体松香菇
+                  </view>
+                  <text class="cu-tag line-gren radius sk-transparent sk-text-14-2857-933 sk-text sk-pseudo sk-pseudo-circle" style="margin-top: 5px;">
+                    前菜
+                  </text>
+                  <text class="cu-tag line-gren radius sk-transparent sk-text-14-2857-792 sk-text sk-pseudo sk-pseudo-circle" style="margin-top: 5px;">
+                    推荐
+                  </text>
+                  <text class="cu-tag line-gren radius sk-transparent sk-text-14-2857-705 sk-text sk-pseudo sk-pseudo-circle" style="margin-top: 5px;">
+                    法式
+                  </text>
+                  <view class="line">
+                    <view class="dish_price sk-transparent sk-text-13-6364-356 sk-text">
+                      ￥188
+                    </view>
+                    <view class="dish_amount">
+                      <view data-count="0" data-id="1" data-imgurl="111.png" data-price="188" data-proname="盐烤活体松香菇">
+                        <image style="width: 22px;height: 22px;" class="sk-image">
+                        </image>
+                      </view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <view class="dishesbox" data-id="1" hover-class="itemhover" style="border: none;">
+                <view class="dishesimg_box">
+                </view>
+                <view class="dishestext">
+                  <view class="dish_name sk-transparent sk-text-14-2857-965 sk-text">
+                    盐烤活体松香菇
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </scroll-view>
+      </view>
+    </view>
+    <view class="allselected">
+      <view class="allselected-left">
+        <view class="allselected-title">
+          <image class="dishes_png sk-image">
+          </image>
+        </view>
+        <view class="allprices">
+          <text class="sk-transparent sk-text-14-2857-274 sk-text">
+            ￥0.00
+          </text>
+          <text class="dish_text original_price" style="text-decoration-color: transparent;">
+          </text>
+          <text class="dish_text">
+          </text>
+        </view>
+      </view>
+      <view class="allselected-right sk-transparent sk-text-36-0000-881 sk-text" hover-class="hoverclass" style="border: none; background-position-x: 50%;">
+        选好了
+      </view>
+    </view>
+    <view class="sk-loading-spinner">
+      <view class="circular">
+      </view>
+    </view>
+  </view>
+</template>

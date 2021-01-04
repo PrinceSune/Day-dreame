@@ -1,0 +1,48 @@
+<!--pages/chushiList/chushiList.wxml-->
+<!--这里是头部推荐厨师列表开始-->
+<view class="head">
+   <!--这是头部厨师推荐标题-->
+    <view class="headTitle">推荐名厨</view>
+    <!--这里是厨师推荐列表开始-->
+    <view class="chefRelist">
+       <!--这里是厨师头像与名字-->
+       <block wx:for="{{cheflist1}}"  wx:key="key" wx:for-index="index" wx:for-item="item">
+       <view class="chef" bindtap="jumpto" data-id="{{item.id}}">
+           <view class="chefPh">
+              <image class="photo" src="http://192.168.43.183:8000/static/uploadimg/{{item.img}}"></image>
+           </view> 
+            <view class="chefNa" >{{item.name}}</view>
+       </view>
+      </block>
+       
+    </view>
+    <!--此view只占位-->
+       <view class="vanishBox"></view>
+</view>
+
+<!--这里是所有包含所有厨师的列表开始-->
+<view class="body">
+    <!--厨师列表盒子-->
+   <view class="listBox">
+   <block wx:for="{{cheflist}}"  wx:key="key" wx:for-index="index" wx:for-item="item">
+       <view class="member bg-white shadow-warp radius margin-bottom" bindtap="jumpto" data-id="{{item.id}}">
+            <view class="listPh">
+               <image class="photo2" src="http://192.168.43.183:8000/static/uploadimg/{{item.img}}"></image>
+            </view>
+            <view class="Infor">
+                <view class="myNa">{{item.name}}</view>
+                 <view class="comments">
+                     {{item.comments}}
+                 </view>
+            </view>
+
+            
+       </view>
+   </block>
+        
+   
+   </view>
+
+
+</view>
+<!--这里是所有包含所有厨师的列表结束-->

@@ -1,0 +1,18 @@
+
+<view class="bg-white shadow radius" style="width: 620rpx;height: 620rpx;margin: 100rpx auto 50rpx;padding: 30rpx 0;">
+	<view style="height: 100rpx;">
+    <view class="cu-avatar lg round margin-left" style="background-image:url(http://192.168.43.183:8000/static/uploadimg/head.png);" style="background-image:url(../../images/kong.jpg);width: 80rpx;height: 80rpx;float: left;">
+		  <image src="{{headimg}}" style="height:80rpx;width：80rpx;border-radius:50%"></image>
+	  </view>
+		<view style="float: left;height: 80rpx;line-height: 80rpx;margin-left: 20rpx;font-weight: bold;color:#333 ;">{{username}}</view>
+	</view>
+	<view class="radius" style="width: 368rpx;height: 368rpx; margin:10rpx auto;border:1rpx solid #ddd;padding:4rpx ;">
+		
+		   <image src="../../images/vipnum.png" style="width: 360rpx;height: 360rpx;"></image>
+	</view>
+	<view class="text-sm" style="width: 100%;height: 80rpx;line-height: 80rpx;text-align: center;">156****2068</view>
+</view>
+
+<view class="text-xs text-grey" style="width:100%;text-align: center;">
+	请向服务员展示会员码使用积分
+</view>

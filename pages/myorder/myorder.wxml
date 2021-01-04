@@ -1,0 +1,37 @@
+<!--pages/myorder/myorder.wxml-->
+<view>
+  <block wx:for="{{myorderlist}}"  wx:key="key" wx:for-index="idx" wx:for-item="myorderlist">
+    <view class="bg-white shadow radius" style="width: 660rpx;margin: 40rpx auto 70rpx;min-height: 400rpx;padding: 20rpx;">
+      <view style="font-size: 28rpx; font-weight: bolder;text-align: center;margin:10rpx 0 60rpx;">白日梦想| 法餐厅（Day dream）</view>
+      <block wx:for="{{myorderlistview}}"  wx:key="key" wx:for-index="idx" wx:for-item="myorderlistview" wx:if="{{myorderlist.orderid == myorderlistview.orderid}}">
+        <view class="fooditem" style="height:110rpx;width: 100%;">
+            <image src="http://192.168.43.183:8000/static/uploadimg/{{myorderlistview.imgurl}}"  style="width: 80rpx;height: 80rpx;float: left;border-radius: 10rpx;" />
+            <view class="rightbox" style="float: left;margin-left: 15rpx;">
+              <view class="" style="font-weight: bold;font-size: 26rpx;">{{myorderlistview.proname}}</view>
+              <view class="dish_price" style="font-size: 20rpx;margin-top: 20rpx;">×{{myorderlistview.procount}}</view>
+            </view>
+          <view style="line-height: 80rpx;font-weight: bold;float: right;margin-right: 20rpx;"> ￥{{myorderlistview.price}}/份</view>
+        </view>  
+      </block>
+      <view style="clear: both;"></view>  
+      <view  style="margin:20rpx 5rpx 13rpx;font-weight: bolder;">订单信息</view>
+      <view class="info" style="padding:0 10rpx">
+        <view class="a1">姓名：<text>{{myorderlist.sname}}</text></view>
+        <view class="a1">电话：<text>{{myorderlist.stel}}</text> </view> 
+        <view class="a1">配送地址：{{myorderlist.saddress}}</view>
+      <view class="a1">订单号：<text style="margin-left:27rpx">{{myorderlist.orderid}}</text> </view>
+        <view class="a1">下单时间：{{myorderlist.ctime}}</view>
+        <view class="a2">订单备注：<text>{{myorderlist.memo}}</text></view>
+      </view>
+      <view style="float:right;height:60rpx;font-size:48rpx;font-weigt:bolder;margin-right:15rpx" class="text-black">￥{{myorderlist.sumprice}}.<text style="font-size:40rpx">00</text> </view>
+      <view style="clear: both;"></view> 
+      <view class="padding flex flex-direction">
+        <button data-id="{{myorderlist.orderid}}" data-price="{{myorderlist.sumprice}}" bindtap="fnsureorder"  class="cu-btn lg round" class="issure{{myorderlist.issure}}"><text class="weiqueren{{myorderlist.issure}}">确认送达</text><text class="yiqueren{{myorderlist.issure}}">已确认</text></button>
+      </view>
+    </view> 
+  </block>
+  
+
+  
+	
+</view>

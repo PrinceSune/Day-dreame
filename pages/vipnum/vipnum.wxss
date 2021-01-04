@@ -1,0 +1,5 @@
+/* pages/vipnum/vipnum.wxss */
+page{
+    background-color: #FAFAFA;
+    height: 100%;
+}

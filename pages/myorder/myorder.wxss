@@ -1,0 +1,22 @@
+.info{
+  line-height: 45rpx;
+}
+.a1 text{
+  margin-left: 60rpx
+}
+.a2 text{
+  font-weight: bolder;
+  font-size: 33rpx;
+}
+.issure0{
+  background-color:#ffb1ae;height: 60rpx;color: white;font-weight: bolder;font-size: 26rpx;
+}
+.issure1{
+  background-color:#cfcfcf;height: 60rpx;color: white;font-weight: bolder;font-size: 26rpx;
+}
+.weiqueren1{
+  display: none;
+}
+.yiqueren0{
+  display: none;
+}
